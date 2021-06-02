@@ -1,0 +1,22 @@
+.search {
+  position: absolute;
+  top: 35vh;
+  left: 38vw;
+  width: 250px;
+  margin-top: 5px;
+}
+
+img {
+  position: relative;
+  bottom: 45px;
+  left: 215px;
+}
+input {
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px 30px 10px 10px;
+  width: 100%;
+  border: 2px solid rgb(128, 144, 236);
+  border-radius: 20px;
+  outline: none;
+}
