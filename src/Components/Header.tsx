@@ -3,11 +3,7 @@ import "./header.css";
 import Search from "./Search";
 
 function Header() {
-  return (
-    <div className="header">
-      <Search />
-    </div>
-  );
+  return <div className="header"></div>;
 }
 
 export default Header;

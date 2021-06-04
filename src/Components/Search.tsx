@@ -1,15 +1,20 @@
 import React, { Fragment, KeyboardEvent, useState } from "react";
 import lupa from "../images/lupa.png";
+import News from "./News";
 import "./search.css";
 
 function Search() {
-  const apiBas =
-    "https://newsapi.org/v2/everything?q=nueva-york&apiKey=939167e7872649b9a97697a91db03fce";
   const [Contenido, setContenido] = useState("");
+  const [resultNews, setResultnews] = useState([]);
 
   const enterPress = (event: KeyboardEvent) => {
     if (event.key === "Enter") {
-      console.log("do validate  " + Contenido);
+      let x: string = Contenido.replace(/ |<>/g, "-");
+      fetch(
+        "https://newsapi.org/v2/everything?q={x}&apiKey=939167e7872649b9a97697a91db03fce"
+      )
+        .then((Response) => Response.json())
+        .then((data) => setResultnews(data.articles));
     }
   };
 
